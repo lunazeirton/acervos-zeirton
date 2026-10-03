@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Artigos, reflexões, pesquisas e acervo de Zeirton Luna." />
+  <title>Zeirton Luna | Artigos, reflexões e acervo</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./">Zeirton Luna</a><nav><a href="#artigos">Artigos</a><a href="#acervo">Acervo</a><a href="#sobre">Sobre</a><a href="#admin">Admin</a></nav></header>
+  <main>
+    <section class="hero"><p class="eyebrow">ARTIGOS · REFLEXÕES · ACERVO</p><h1>Ideias, pesquisas e registros reunidos em um só lugar.</h1><p class="lead">Um espaço autoral para leitura, consulta e preservação de textos, documentos e materiais digitais.</p><div class="hero-actions"><a class="button" href="#artigos">Ler artigos</a><a class="button secondary" href="#acervo">Explorar acervo</a></div></section>
+    <section class="search-section"><label for="search">Pesquisar no site</label><input id="search" type="search" placeholder="Digite um título, tema ou palavra-chave" /></section>
+    <section id="artigos" class="section"><div class="section-heading"><div><p class="eyebrow">PUBLICAÇÕES</p><h2>Artigos recentes</h2></div></div><div id="articles" class="grid"><p class="muted">Carregando artigos…</p></div></section>
+    <section id="acervo" class="section alt"><div class="section-heading"><div><p class="eyebrow">BIBLIOTECA DIGITAL</p><h2>Acervo</h2></div></div><div id="archive" class="grid"><p class="muted">Carregando acervo…</p></div></section>
+    <section id="sobre" class="section prose-block"><p class="eyebrow">SOBRE</p><h2>Zeirton Luna</h2><p>Artigos, reflexões, pesquisas e registros pessoais reunidos em um arquivo digital independente. O projeto foi pensado para preservar conteúdos, facilitar consultas e manter uma biblioteca autoral organizada.</p></section>
+    <section id="admin" class="section alt"><div class="admin-wrap"><div><p class="eyebrow">ADMINISTRAÇÃO</p><h2>Painel administrativo</h2><p class="muted">Entre com sua conta do Supabase para publicar novos artigos.</p></div><form id="login-form" class="panel"><input id="email" type="email" placeholder="E-mail" required /><input id="password" type="password" placeholder="Senha" required /><button class="button" type="submit">Entrar</button><p id="login-status" class="muted"></p></form><form id="article-form" class="panel hidden"><input id="article-title" placeholder="Título do artigo" required /><input id="article-slug" placeholder="Slug (ex.: meu-artigo)" required /><textarea id="article-excerpt" placeholder="Resumo"></textarea><textarea id="article-content" placeholder="Conteúdo do artigo" rows="12" required></textarea><select id="article-status"><option value="draft">Rascunho</option><option value="published">Publicado</option></select><button class="button" type="submit">Salvar artigo</button><button id="logout" class="button secondary" type="button">Sair</button><p id="article-status-text" class="muted"></p></form></div></section>
+  </main>
+  <div id="reader" class="modal hidden" role="dialog" aria-modal="true"><div class="reader-card"><button id="close-reader" class="close" aria-label="Fechar">×</button><p id="reader-meta" class="eyebrow"></p><h1 id="reader-title"></h1><div id="reader-content" class="reader-content"></div></div></div>
+  <footer><span>© Zeirton Luna</span><span>Artigos · Acervo · Arquivo pessoal</span></footer>
+  <script src="./config.js"></script><script type="module" src="./app.js"></script>
+</body>
+</html>
